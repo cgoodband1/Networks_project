@@ -36,7 +36,7 @@ public class cthread extends Thread{
                 long end = System.currentTimeMillis();
                 total = (end - start);
                 System.out.println(ret);
-                System.out.println("Client Turn-around time: "total + "ms");
+                System.out.println("Client Turn-around time: " + total + "ms");
 
                 socket.close();
 
@@ -46,5 +46,9 @@ public class cthread extends Thread{
             }//catch(InterruptedException e){
             //System.out.println("my thread interrupted");
             //}
+        }
+
+         public long gettime(){
+            return total;
         }
     }
